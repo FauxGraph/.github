@@ -1,11 +1,24 @@
 # FauxGraph Journal
 
-## TODO:
+## TODO
 
+TODO:
+
+- Why isn't Mgid set as container app identity? (cf, Configure/Identity in https://containerapps.azure.com/)
 - Connect '/data' to Az Stg with tenant's data
 - Fixed yet? [app id bug](#azurerm_container_app-identity-bug)
 
 ## History
+
+### 08/25/2026
+
+- Implemented basic health checks; KEDA was shutting down container due to HTTP 400s
+  - Added Bruno tests for health checks
+- Using [ACA portal](https://containerapps.azure.com)
+  - Manually set ACA's scale to 1:1 - run only 1 and keep it running.
+  - Manually set ACA's target port to 8080
+- [19: Fix tenant lookup](https://github.com/FauxGraph/cohere/issues/19)
+- Resolved [16: Enable Az health probes](https://github.com/FauxGraph/cohere/issues/16)
 
 ### 08/24/2026
 
